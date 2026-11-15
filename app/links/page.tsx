@@ -73,14 +73,8 @@ export default function Links() {
           <Link href="/" className={`${btn} bg-gold text-navy-deep`}>
             Ver página web
           </Link>
-          <Link href="/servicios/lavado-de-muebles-y-colchones-medellin" className={`${btn} bg-white text-navy`}>
-            Lavado de muebles y colchones
-          </Link>
           <Link href="/servicios/limpieza-de-oficinas-medellin" className={`${btn} bg-white text-navy`}>
             Limpieza de oficinas
-          </Link>
-          <Link href="/empresas" className={`${btn} bg-white text-navy`}>
-            Planes para empresas
           </Link>
           <Link href="/contacto" className={`${btn} bg-white text-navy`}>
             Reservar una visita
