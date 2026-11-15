@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CtaBand } from "@/components/CtaBand";
 import { PageIntro } from "@/components/PageIntro";
 import { MapSection } from "@/components/MapSection";
+import { TikTokVideos } from "@/components/TikTokVideos";
 import { equipoImage, promises } from "@/lib/site";
 import { RisingBubbles } from "@/components/RisingBubbles";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -71,6 +72,8 @@ export default function Nosotros() {
           </p>
         </div>
       </section>
+
+      <TikTokVideos compact />
 
       <MapSection />
 

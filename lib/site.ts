@@ -34,6 +34,16 @@ export const bannerImage = "";
  */
 export const equipoImage = "";
 
+/*
+ * VIDEOS DE TIKTOK (sección "Así trabajamos")
+ * Para agregar uno: copia el número largo del link del video
+ * (tiktok.com/@ofcasapro/video/ESTE_NUMERO) y ponlo en "id".
+ */
+export const videosTikTok = [
+  { id: "7665868057172086036", titulo: "Lavado de sofá" },
+  { id: "7665884258191428885", titulo: "Proceso de secado" },
+];
+
 /* Fotos del servicio de lavado de muebles y colchones (en public/img/) */
 export const galeriaMuebles = [
   { src: "/img/sofa.jpg", titulo: "Sofás y salas", alt: "Lavado de sofá con máquina de inyección y succión" },

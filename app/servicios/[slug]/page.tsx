@@ -6,6 +6,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { RisingBubbles } from "@/components/RisingBubbles";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { TikTokVideos } from "@/components/TikTokVideos";
 import { faqs, galeriaMuebles, serviceBySlug, services, site, waLink } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -138,6 +139,8 @@ export default async function ServicioPage({ params }: { params: Promise<{ slug:
           </ul>
         </section>
       )}
+
+      {s.id === "hogar" && <TikTokVideos />}
 
       {/* Detalle */}
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:py-24 lg:grid-cols-[1.2fr_1fr]">
