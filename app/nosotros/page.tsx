@@ -17,6 +17,8 @@ export default function Nosotros() {
   return (
     <>
       <PageIntro
+        crumb="Nosotros"
+        icons={["hogar", "oficinas", "profunda"]}
         title="Cuidamos los espacios como si fueran nuestros"
         text="Ofcasa Pro es un equipo de limpieza de Bello. Trabajamos en oficinas, consultorios y hogares con el mismo cuidado en cada visita."
       />

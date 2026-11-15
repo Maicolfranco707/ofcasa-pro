@@ -3,6 +3,7 @@ import { Plus, WhatsAppIcon } from "@/components/Icons";
 import { ReservaForm } from "@/components/ReservaForm";
 import { JsonLd } from "@/components/JsonLd";
 import { MapSection } from "@/components/MapSection";
+import { PageIntro } from "@/components/PageIntro";
 import { faqs, site, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
 export default function Contacto() {
   return (
     <>
+    <PageIntro
+      crumb="Contacto"
+      title="Hablemos de tu espacio"
+      text="Llena el formulario o escríbenos directo. Respondemos el mismo día."
+      icons={["hogar", "oficinas", "muebles"]}
+    />
     <section className="bg-mist">
       <JsonLd
         data={{
@@ -23,18 +30,11 @@ export default function Contacto() {
         }}
       />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:py-24 lg:grid-cols-[1fr_1.15fr] lg:gap-x-14">
-        <div className="lg:col-start-1 lg:row-start-1">
-          <h1 className="font-display text-5xl leading-[1.04] text-navy md:text-6xl">Hablemos de tu espacio</h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-slate">
-            Llena el formulario o escríbenos directo. Respondemos el mismo día.
-          </p>
-        </div>
-
-        <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:sticky lg:top-24 lg:self-start">
+        <div className="lg:col-start-2 lg:row-start-1 lg:sticky lg:top-24 lg:self-start">
           <ReservaForm />
         </div>
 
-        <div className="lg:col-start-1 lg:row-start-2">
+        <div className="lg:col-start-1 lg:row-start-1">
           <div className="space-y-4">
             <a
               href={waLink()}

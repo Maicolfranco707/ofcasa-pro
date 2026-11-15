@@ -34,6 +34,8 @@ export default function Empresas() {
   return (
     <>
       <PageIntro
+        crumb="Planes para empresas"
+        icons={["oficinas", "consultorios", "mantenimiento"]}
         title="Planes para empresas"
         text="Elige la frecuencia que necesita tu oficina. El precio depende del tamaño del espacio y lo definimos después de conocerlo, sin compromiso."
       />

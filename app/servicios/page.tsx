@@ -17,15 +17,17 @@ export default function Servicios() {
   return (
     <>
       <PageIntro
+        crumb="Servicios"
+        icons={["oficinas", "vidrios-pisos", "muebles"]}
         title="Servicios de limpieza"
         text="Desde una limpieza profunda puntual hasta el mantenimiento diario de tu oficina. Todos con personal uniformado y revisión al final de la visita."
       />
 
       <nav aria-label="Servicios" className="sticky top-[69px] z-30 border-b border-line bg-white/95 backdrop-blur">
-        <ul className="mx-auto flex max-w-6xl gap-6 overflow-x-auto px-5 py-4 text-[15px] whitespace-nowrap">
+        <ul className="mx-auto flex max-w-6xl gap-6 overflow-x-auto px-5 py-1.5 text-[15px] whitespace-nowrap">
           {services.map((s) => (
             <li key={s.id}>
-              <a href={`#${s.id}`} className="text-slate hover:text-navy">
+              <a href={`#${s.id}`} className="inline-flex min-h-11 items-center text-slate hover:text-navy">
                 {s.name}
               </a>
             </li>
