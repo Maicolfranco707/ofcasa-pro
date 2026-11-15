@@ -7,7 +7,8 @@ import { waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Planes para empresas",
-  description: "Planes de limpieza para oficinas y consultorios en El Poblado: visita única, semanal o diaria.",
+  description: "Planes de limpieza para oficinas y consultorios en Bello y Medellín: visita única, semanal o diaria.",
+  alternates: { canonical: "/empresas" },
 };
 
 const planes = [

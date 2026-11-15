@@ -3,7 +3,11 @@ export const site = {
   phoneDisplay: "304 459 9438",
   phoneIntl: "573044599438",
   web: "www.ofcasapro.com",
-  zone: "El Poblado, Medellín",
+  url: "https://ofcasa-pro.vercel.app",
+  zone: "Bello y Medellín",
+  address: "Calle 64A #65D-46",
+  city: "Bello",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Calle+64A+%2365D-46+Bello+Antioquia",
   social: {
     instagram: "https://www.instagram.com/ofcasapro",
     tiktok: "https://www.tiktok.com/@ofcasapro",
@@ -46,6 +50,11 @@ export const nav = [
 
 export type Service = {
   id: string;
+  slug: string;
+  h1: string;
+  seoTitle: string;
+  seoDescription: string;
+  intro: string[];
   name: string;
   short: string;
   description: string;
@@ -56,6 +65,15 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "oficinas",
+    slug: "limpieza-de-oficinas-medellin",
+    h1: "Limpieza de oficinas en Bello y Medellín",
+    seoTitle: "Limpieza de oficinas en Bello y Medellín",
+    seoDescription:
+      "Servicio de aseo y limpieza de oficinas en Bello, Medellín y el Valle de Aburrá. Personal uniformado, insumos incluidos y revisión de calidad en cada visita. Cotiza por WhatsApp.",
+    intro: [
+      "Una oficina limpia es lo primero que nota un cliente al entrar. Nos encargamos de puestos de trabajo, salas de reunión, recepción, cocina y baños para que tu equipo trabaje tranquilo y tus visitas se lleven una buena impresión.",
+      "Trabajamos con visitas únicas o con planes semanales y diarios, en el horario que menos interrumpa tu operación. Al terminar cada servicio revisamos el resultado.",
+    ],
     name: "Limpieza de oficinas",
     short: "Espacios de trabajo listos para recibir clientes.",
     description:
@@ -71,6 +89,15 @@ export const services: Service[] = [
   },
   {
     id: "profunda",
+    slug: "limpieza-profunda-y-desinfeccion-medellin",
+    h1: "Limpieza profunda y desinfección en Medellín",
+    seoTitle: "Limpieza profunda y desinfección en Medellín",
+    seoDescription:
+      "Limpieza profunda y desinfección de oficinas, consultorios y hogares en Medellín: puntos de contacto, baños, cocinas y rincones. Ideal después de obra o antes de mudanza.",
+    intro: [
+      "Hay momentos en que el aseo de rutina no alcanza: después de una obra, antes de entregar o recibir un inmueble, o simplemente cuando el espacio necesita empezar de cero.",
+      "En una limpieza profunda vamos a los rincones, detrás de los muebles, los zócalos y todos los puntos que se tocan a diario, y desinfectamos baños y cocinas.",
+    ],
     name: "Limpieza profunda y desinfección",
     short: "Cada rincón y cada punto de contacto.",
     description:
@@ -85,6 +112,15 @@ export const services: Service[] = [
   },
   {
     id: "mantenimiento",
+    slug: "aseo-y-mantenimiento-de-oficinas-medellin",
+    h1: "Aseo diario o semanal para oficinas en Medellín",
+    seoTitle: "Aseo diario o semanal de oficinas en Medellín",
+    seoDescription:
+      "Planes de aseo y mantenimiento diario o semanal para oficinas y consultorios en Bello y Medellín. Horario a tu medida y revisión en cada visita.",
+    intro: [
+      "Con un plan de mantenimiento tu oficina se mantiene presentable todos los días sin que tengas que pensar en eso.",
+      "Definimos contigo las tareas por zona y el horario, y revisamos el resultado al final de cada visita. Si tu oficina cambia, ajustamos el plan.",
+    ],
     name: "Mantenimiento diario o semanal",
     short: "La misma persona, el mismo estándar, cada visita.",
     description:
@@ -98,6 +134,15 @@ export const services: Service[] = [
   },
   {
     id: "vidrios-pisos",
+    slug: "limpieza-de-vidrios-y-pisos-medellin",
+    h1: "Limpieza de vidrios y pisos en Medellín",
+    seoTitle: "Limpieza de vidrios y pisos en Medellín",
+    seoDescription:
+      "Limpieza de vidrios, divisiones, espejos y pisos de porcelanato, madera o cerámica en oficinas y hogares de Medellín. Sin marcas ni residuos.",
+    intro: [
+      "Los vidrios con marcas y los pisos opacos se notan apenas alguien entra. Limpiamos ventanales interiores, divisiones de vidrio y espejos sin dejar rayas.",
+      "Para los pisos usamos el producto adecuado según el material, ya sea porcelanato, madera o cerámica, para que queden limpios y con brillo sin dañarlos.",
+    ],
     name: "Vidrios y pisos",
     short: "Vidrios sin marcas y pisos con brillo.",
     description:
@@ -111,6 +156,15 @@ export const services: Service[] = [
   },
   {
     id: "consultorios",
+    slug: "limpieza-de-consultorios-y-edificios-medellin",
+    h1: "Limpieza de consultorios y edificios en Medellín",
+    seoTitle: "Limpieza de consultorios y edificios en Medellín",
+    seoDescription:
+      "Aseo de consultorios, salas de espera y zonas comunes de edificios en Bello y Medellín. Higiene y orden donde más se nota.",
+    intro: [
+      "En un consultorio la limpieza es parte de la confianza que siente el paciente. Nos encargamos de salas de espera, recepción, consultorios y baños.",
+      "En edificios atendemos pasillos, ascensores y zonas comunes, que son las áreas de más tránsito y las que primero dan una impresión del lugar.",
+    ],
     name: "Consultorios y edificios",
     short: "Higiene y calma donde más se nota.",
     description:
@@ -124,6 +178,15 @@ export const services: Service[] = [
   },
   {
     id: "hogar",
+    slug: "lavado-de-muebles-y-colchones-medellin",
+    h1: "Lavado de muebles, sofás y colchones en Bello y Medellín",
+    seoTitle: "Lavado de muebles, sofás y colchones a domicilio en Bello y Medellín",
+    seoDescription:
+      "Lavado de sofás, salas, colchones, sillas y alfombras a domicilio en Bello y Medellín con máquinas de inyección y succión. Secado rápido. Cotiza por WhatsApp.",
+    intro: [
+      "Los sofás, colchones y sillas acumulan polvo, manchas y olores que no salen con una limpieza normal. Los lavamos en tu casa u oficina con máquinas de inyección y succión que sacan la suciedad de adentro.",
+      "También hacemos limpieza general de apartamentos y casas, y lavado de alfombras. Usamos productos que cuidan las telas y las superficies.",
+    ],
     name: "Hogares, muebles y colchones",
     short: "Sofás, colchones y alfombras como nuevos.",
     description:
@@ -135,7 +198,7 @@ export const services: Service[] = [
       "Lavado de sillas de comedor y de oficina",
       "Lavado de alfombras",
     ],
-    goodFor: "Apartamentos y casas en El Poblado y alrededores",
+    goodFor: "Apartamentos y casas en Bello, Medellín y alrededores",
   },
 ];
 
@@ -177,7 +240,7 @@ export const faqs = [
   },
   {
     q: "¿En qué zonas trabajan?",
-    a: "En El Poblado y alrededores, en Medellín. Si estás en otra zona, escríbenos y te confirmamos.",
+    a: "Estamos en Bello y atendemos sobre todo en Bello y sectores cercanos, además de Medellín y el Valle de Aburrá. Si estás en otra zona, escríbenos y te confirmamos.",
   },
   {
     q: "¿Qué tan rápido responden?",
@@ -198,7 +261,7 @@ export const antesDespues: { titulo: string; antes: string; despues: string }[] 
  * TESTIMONIOS
  * Solo opiniones REALES de clientes (copiadas de WhatsApp o Google).
  * Ejemplo:
- * { texto: "Muy puntuales y la oficina quedó impecable.", nombre: "Laura M.", lugar: "Consultorio en El Poblado", estrellas: 5 },
+ * { texto: "Muy puntuales y la oficina quedó impecable.", nombre: "Laura M.", lugar: "Consultorio en Bello", estrellas: 5 },
  * Si la lista está vacía, la sección no aparece en la página.
  */
 export const testimonios: { texto: string; nombre: string; lugar: string; estrellas?: number }[] = [
@@ -229,3 +292,7 @@ export const testimonios: { texto: string; nombre: string; lugar: string; estrel
     estrellas: 4,
   },
 ];
+
+export function serviceBySlug(slug: string) {
+  return services.find((s) => s.slug === slug);
+}

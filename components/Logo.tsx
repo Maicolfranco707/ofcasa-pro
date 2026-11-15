@@ -11,7 +11,7 @@ export function Logo({ light = false }: { light?: boolean }) {
           Ofcasa Pro
         </span>
         <span className={`mt-1 text-[12px] ${light ? "text-white/70" : "text-slate"}`}>
-          Aseo en El Poblado
+          Aseo en Bello y Medellín
         </span>
       </span>
     </Link>

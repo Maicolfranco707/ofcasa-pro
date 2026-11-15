@@ -43,7 +43,7 @@ export function Testimonios({ items }: { items: Testimonio[] }) {
     <section className="overflow-hidden bg-sky">
       <div className="mx-auto max-w-6xl px-5 pt-16 md:pt-24">
         <h2 className="font-display text-4xl leading-[1.1] text-navy md:text-5xl">Quiénes nos prefieren</h2>
-        <p className="mt-3 text-lg text-slate">Clientes en El Poblado y alrededores.</p>
+        <p className="mt-3 text-lg text-slate">Clientes en Bello, Medellín y el Valle de Aburrá.</p>
       </div>
 
       <div className="marquee group mt-10" style={{ ["--marquee-duration" as string]: `${segundos}s` }}>

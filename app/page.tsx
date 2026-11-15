@@ -10,12 +10,12 @@ import { Testimonios } from "@/components/Testimonios";
 import { antesDespues, bannerImage, faqs, galeriaMuebles, promises, services, testimonios } from "@/lib/site";
 
 const categorias = [
-  { icon: "oficinas", label: "Oficinas", href: "/servicios#oficinas" },
-  { icon: "hogar", label: "Casas", href: "/servicios#hogar" },
-  { icon: "consultorios", label: "Consultorios", href: "/servicios#consultorios" },
-  { icon: "vidrios-pisos", label: "Vidrios y pisos", href: "/servicios#vidrios-pisos" },
-  { icon: "alfombras", label: "Alfombras", href: "/servicios#hogar" },
-  { icon: "muebles", label: "Muebles y colchones", href: "/servicios#hogar" },
+  { icon: "oficinas", label: "Oficinas", href: "/servicios/limpieza-de-oficinas-medellin" },
+  { icon: "hogar", label: "Casas", href: "/servicios/lavado-de-muebles-y-colchones-medellin" },
+  { icon: "consultorios", label: "Consultorios", href: "/servicios/limpieza-de-consultorios-y-edificios-medellin" },
+  { icon: "vidrios-pisos", label: "Vidrios y pisos", href: "/servicios/limpieza-de-vidrios-y-pisos-medellin" },
+  { icon: "alfombras", label: "Alfombras", href: "/servicios/lavado-de-muebles-y-colchones-medellin" },
+  { icon: "muebles", label: "Muebles y colchones", href: "/servicios/lavado-de-muebles-y-colchones-medellin" },
 ];
 
 const revision = [
@@ -45,7 +45,7 @@ const segmentos = [
   {
     title: "Para tu hogar",
     text: "Apartamentos y casas, lavado de sofás, colchones y alfombras.",
-    href: "/servicios#hogar",
+    href: "/servicios/lavado-de-muebles-y-colchones-medellin",
     cta: "Ver servicio de hogar",
     icon: "hogar",
     dark: false,
@@ -68,7 +68,7 @@ export default function Home() {
         <Bubbles className="pointer-events-none absolute -bottom-40 -left-32 -z-10 w-[420px] rotate-180 opacity-60" />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-12 md:gap-14 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_1fr]">
           <div>
-            <p className="text-[15px] text-gold">Limpieza de oficinas y hogares en El Poblado</p>
+            <p className="text-[15px] text-gold">Limpieza de oficinas y hogares en Bello y Medellín</p>
             <h1 className="sheen mt-5 font-display text-[40px] leading-[1.04] tracking-[-0.01em] sm:text-6xl lg:text-[72px]">
               Que tu oficina hable bien de ti antes de que digas una palabra.
             </h1>
@@ -76,7 +76,7 @@ export default function Home() {
               Personal uniformado, insumos de calidad y una revisión al final de cada visita.
             </p>
             <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-[15px] text-white/85">
-              {["Cotización sin compromiso", "Respuesta el mismo día", "El Poblado y alrededores"].map((t) => (
+              {["Cotización sin compromiso", "Respuesta el mismo día", "Bello, Medellín y alrededores"].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <Check className="size-4 text-gold" />
                   {t}
@@ -143,7 +143,7 @@ export default function Home() {
         <ul className="mt-10 grid border-t border-line md:mt-12 md:grid-cols-2 md:gap-x-16">
           {services.map((s) => (
             <li key={s.id} className="border-b border-line">
-              <Link href={`/servicios#${s.id}`} className="group flex items-center justify-between gap-5 py-5 md:py-6">
+              <Link href={`/servicios/${s.slug}`} className="group flex items-center justify-between gap-5 py-5 md:py-6">
                 <span className="grid size-14 shrink-0 place-items-center rounded-xl bg-sky">
                   <ServiceIcon name={s.id} className="size-10" />
                 </span>
@@ -170,7 +170,7 @@ export default function Home() {
                 Con máquinas de inyección y succión que sacan la suciedad de adentro y secan rápido.
               </p>
             </div>
-            <Link href="/servicios#hogar" className="font-semibold text-navy underline decoration-gold decoration-2 underline-offset-[6px] hover:text-gold-ink">
+            <Link href="/servicios/lavado-de-muebles-y-colchones-medellin" className="font-semibold text-navy underline decoration-gold decoration-2 underline-offset-[6px] hover:text-gold-ink">
               Ver el servicio
             </Link>
           </div>
@@ -283,7 +283,7 @@ export default function Home() {
           <div>
             <h2 className="font-display text-4xl leading-[1.1] text-navy md:text-5xl">Preguntas frecuentes</h2>
             <p className="mt-5 max-w-sm text-lg leading-relaxed text-slate">
-              Atendemos en El Poblado y alrededores. ¿Otra duda?{" "}
+              Atendemos en Bello, Medellín y el Valle de Aburrá. ¿Otra duda?{" "}
               <Link href="/contacto" className="font-semibold text-navy underline decoration-gold decoration-2 underline-offset-[6px]">
                 Escríbenos
               </Link>

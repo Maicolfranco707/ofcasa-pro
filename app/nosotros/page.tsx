@@ -7,7 +7,8 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 
 export const metadata: Metadata = {
   title: "Nosotros",
-  description: "Quiénes somos y cómo trabajamos en Ofcasa Pro, limpieza de oficinas y hogares en El Poblado.",
+  description: "Quiénes somos y cómo trabajamos en Ofcasa Pro, limpieza de oficinas y hogares en Bello y Medellín.",
+  alternates: { canonical: "/nosotros" },
 };
 
 export default function Nosotros() {
@@ -15,7 +16,7 @@ export default function Nosotros() {
     <>
       <PageIntro
         title="Cuidamos los espacios como si fueran nuestros"
-        text="Ofcasa Pro es un equipo de limpieza de El Poblado. Trabajamos en oficinas, consultorios y hogares con el mismo cuidado en cada visita."
+        text="Ofcasa Pro es un equipo de limpieza de Bello. Trabajamos en oficinas, consultorios y hogares con el mismo cuidado en cada visita."
       />
 
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-24 lg:grid-cols-2">
@@ -73,7 +74,7 @@ export default function Nosotros() {
       <section className="mx-auto max-w-6xl px-5 py-24">
         <h2 className="font-display text-4xl leading-[1.1] text-navy md:text-5xl">Dónde estamos</h2>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
-          Atendemos en El Poblado y sus alrededores, en Medellín. Si estás en otra zona, escríbenos y te decimos si podemos
+          Estamos en Bello y atendemos sobre todo en Bello y los sectores cercanos, además de Medellín y el resto del Valle de Aburrá. Si estás en otra zona, escríbenos y te decimos si podemos
           llegar.
         </p>
       </section>

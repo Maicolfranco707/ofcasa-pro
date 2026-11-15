@@ -159,7 +159,7 @@ export function ReservaForm() {
               </label>
               <label className="text-[15px] font-medium text-ink">
                 Barrio o dirección
-                <input className={field} value={barrio} onChange={(e) => setBarrio(e.target.value)} placeholder="Ej. Provenza" />
+                <input className={field} value={barrio} onChange={(e) => setBarrio(e.target.value)} placeholder="Ej. Niquía" />
               </label>
               <label className="text-[15px] font-medium text-ink">
                 Fecha deseada

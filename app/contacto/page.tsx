@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
 import { Plus, WhatsAppIcon } from "@/components/Icons";
 import { ReservaForm } from "@/components/ReservaForm";
+import { JsonLd } from "@/components/JsonLd";
 import { faqs, site, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto y reservas",
-  description: "Reserva una visita de limpieza en El Poblado. Escríbenos por WhatsApp al 304 459 9438.",
+  description: "Reserva una visita de limpieza en Bello y Medellín. Escríbenos por WhatsApp al 304 459 9438.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function Contacto() {
   return (
     <section className="bg-mist">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:py-24 lg:grid-cols-[1fr_1.15fr] lg:gap-x-14">
         <div className="lg:col-start-1 lg:row-start-1">
           <h1 className="font-display text-5xl leading-[1.04] text-navy md:text-6xl">Hablemos de tu espacio</h1>
@@ -48,6 +57,26 @@ export default function Contacto() {
               <span>
                 <span className="block font-semibold text-navy">Llamar</span>
                 <span className="text-slate">{site.phoneDisplay}</span>
+              </span>
+            </a>
+
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 rounded-xl border border-line bg-white p-5 hover:border-navy"
+            >
+              <span className="grid size-11 place-items-center rounded-full bg-gold text-navy-deep">
+                <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z" />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </span>
+              <span>
+                <span className="block font-semibold text-navy">Dirección</span>
+                <span className="text-slate">
+                  {site.address}, {site.city}
+                </span>
               </span>
             </a>
           </div>

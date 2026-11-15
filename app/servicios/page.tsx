@@ -8,7 +8,9 @@ import { galeriaMuebles, services, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Servicios",
-  description: "Limpieza de oficinas, limpieza profunda, mantenimiento, vidrios y pisos, consultorios y hogares en El Poblado.",
+  description:
+    "Servicios de limpieza en Medellín: oficinas, limpieza profunda, mantenimiento, vidrios y pisos, consultorios y lavado de muebles y colchones.",
+  alternates: { canonical: "/servicios" },
 };
 
 export default function Servicios() {
@@ -43,14 +45,22 @@ export default function Servicios() {
               <p className="mt-6 text-[15px] text-ink">
                 <span className="font-semibold">Ideal para:</span> {s.goodFor}
               </p>
-              <a
-                href={waLink(`Hola Ofcasa Pro, quiero cotizar: ${s.name}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex min-h-12 items-center rounded-full border-2 border-navy px-6 font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
-              >
-                Cotizar este servicio
-              </a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href={`/servicios/${s.slug}`}
+                  className="inline-flex min-h-12 items-center rounded-full bg-navy px-6 font-semibold text-white transition-colors hover:bg-navy-deep"
+                >
+                  Ver más
+                </Link>
+                <a
+                  href={waLink(`Hola Ofcasa Pro, quiero cotizar: ${s.name}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 items-center rounded-full border-2 border-navy px-6 font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+                >
+                  Cotizar este servicio
+                </a>
+              </div>
             </div>
             <div className="self-start">
             {s.id === "hogar" && (
