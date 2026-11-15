@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { WhatsAppIcon } from "./Icons";
 import { RisingBubbles } from "./RisingBubbles";
-import { site, videosTikTok, waLink } from "@/lib/site";
+import { site, videosTikTok, waLink, type Video } from "@/lib/site";
 
 const params = "music_info=0&description=0&rel=0&force_muted=1&volume_control=0&loop=1";
 
@@ -87,6 +87,53 @@ function AutoVideo({ id, titulo, tilt }: { id: string; titulo: string; tilt: str
   );
 }
 
+/* Video propio: se reproduce solo, sin sonido y en bucle cuando aparece en pantalla. */
+function NativeVideo({ src, poster, titulo, tilt }: { src: string; poster?: string; titulo: string; tilt: string }) {
+  const video = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = video.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.muted = true;
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <figure className={`w-[72%] shrink-0 snap-center sm:w-[46%] md:w-[270px] ${tilt}`}>
+      <div className="rounded-[2.4rem] bg-navy-deep p-2.5 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-gold/40">
+        <div className="relative aspect-[9/16] w-full overflow-hidden rounded-[1.9rem] bg-navy">
+          <span className="absolute left-1/2 top-2 z-10 h-1.5 w-14 -translate-x-1/2 rounded-full bg-black/40" aria-hidden="true" />
+          <video
+            ref={video}
+            src={src}
+            poster={poster}
+            muted
+            loop
+            playsInline
+            preload="none"
+            aria-label={`Video: ${titulo}`}
+            className="block h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <figcaption className="mt-4 flex justify-center">
+        <span className="rounded-full bg-gold px-4 py-1.5 text-[15px] font-semibold text-navy-deep">{titulo}</span>
+      </figcaption>
+    </figure>
+  );
+}
+
 function safeParse(s: string) {
   try {
     return JSON.parse(s);
@@ -134,9 +181,13 @@ export function TikTokVideos({ compact = false }: { compact?: boolean }) {
           </div>
         </div>
         <div className="-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-10 md:mx-0 md:justify-center md:gap-8 md:overflow-visible md:px-0">
-          {videosTikTok.map((v, i) => (
-            <AutoVideo key={v.id} id={v.id} titulo={v.titulo} tilt={tilts[i % tilts.length]} />
-          ))}
+          {videosTikTok.map((v: Video, i) =>
+            v.src ? (
+              <NativeVideo key={v.src} src={v.src} poster={v.poster} titulo={v.titulo} tilt={tilts[i % tilts.length]} />
+            ) : v.tiktok ? (
+              <AutoVideo key={v.tiktok} id={v.tiktok} titulo={v.titulo} tilt={tilts[i % tilts.length]} />
+            ) : null,
+          )}
         </div>
       </div>
     </section>
