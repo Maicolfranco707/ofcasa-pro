@@ -10,7 +10,7 @@ const bodoni = Bodoni_Moda({ subsets: ["latin"], variable: "--font-bodoni", disp
 const albert = Albert_Sans({ subsets: ["latin"], variable: "--font-albert", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ofcasapro.com"),
+  metadataBase: new URL("https://ofcasa-pro.vercel.app"),
   title: {
     default: "Ofcasa Pro | Limpieza de oficinas y hogares en El Poblado, Medellín",
     template: "%s | Ofcasa Pro",
@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     description: "Personal uniformado, puntual y con revisión de calidad en cada visita. Cotiza por WhatsApp.",
     locale: "es_CO",
     type: "website",
+    siteName: "Ofcasa Pro",
+    url: "/",
   },
 };
 
