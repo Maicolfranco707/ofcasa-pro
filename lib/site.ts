@@ -45,7 +45,7 @@ export type Video = { titulo: string; src?: string; poster?: string; tiktok?: st
 
 export const videosTikTok: Video[] = [
   { titulo: "Lavado de sofá", src: "/videos/lavado-sofa.mp4", poster: "/videos/lavado-sofa.jpg" },
-  { titulo: "Proceso de secado", tiktok: "7665884258191428885" },
+  { titulo: "Proceso de secado", src: "/videos/proceso-secado.mp4", poster: "/videos/proceso-secado.jpg" },
 ];
 
 /* Fotos del servicio de lavado de muebles y colchones (en public/img/) */
