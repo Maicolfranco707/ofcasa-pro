@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { MobileBar } from "@/components/MobileBar";
 import { JsonLd } from "@/components/JsonLd";
+import { HideOnLinks } from "@/components/HideOnLinks";
 import { services, site } from "@/lib/site";
 
 const bodoni = Bodoni_Moda({ subsets: ["latin"], variable: "--font-bodoni", display: "swap" });
@@ -69,11 +70,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })),
           }}
         />
-        <Header />
+        <HideOnLinks>
+          <Header />
+        </HideOnLinks>
         <main id="contenido">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
-        <MobileBar />
+        <HideOnLinks>
+          <Footer />
+          <FloatingWhatsApp />
+          <MobileBar />
+        </HideOnLinks>
       </body>
     </html>
   );
