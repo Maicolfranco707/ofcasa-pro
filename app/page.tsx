@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check, Plus } from "@/components/Icons";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { CtaBand } from "@/components/CtaBand";
+import { MapSection } from "@/components/MapSection";
 import { QuickQuote } from "@/components/QuickQuote";
 import { Bubbles } from "@/components/Bubbles";
 import { RisingBubbles } from "@/components/RisingBubbles";
@@ -303,6 +304,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MapSection />
 
       <CtaBand />
     </>

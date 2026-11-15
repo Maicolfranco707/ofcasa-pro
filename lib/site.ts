@@ -8,6 +8,7 @@ export const site = {
   address: "Calle 64A #65D-46",
   city: "Bello",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Calle+64A+%2365D-46+Bello+Antioquia",
+  mapsEmbed: "https://www.google.com/maps?q=Calle+64A+%2365D-46,+Bello,+Antioquia,+Colombia&z=16&output=embed",
   social: {
     instagram: "https://www.instagram.com/ofcasapro",
     tiktok: "https://www.tiktok.com/@ofcasapro",

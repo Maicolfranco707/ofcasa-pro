@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus, WhatsAppIcon } from "@/components/Icons";
 import { ReservaForm } from "@/components/ReservaForm";
 import { JsonLd } from "@/components/JsonLd";
+import { MapSection } from "@/components/MapSection";
 import { faqs, site, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function Contacto() {
   return (
+    <>
     <section className="bg-mist">
       <JsonLd
         data={{
@@ -97,5 +99,7 @@ export default function Contacto() {
 
       </div>
     </section>
+    <MapSection />
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/CtaBand";
 import { PageIntro } from "@/components/PageIntro";
+import { MapSection } from "@/components/MapSection";
 import { equipoImage, promises } from "@/lib/site";
 import { RisingBubbles } from "@/components/RisingBubbles";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -71,13 +72,7 @@ export default function Nosotros() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <h2 className="font-display text-4xl leading-[1.1] text-navy md:text-5xl">Dónde estamos</h2>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate">
-          Estamos en Bello y atendemos sobre todo en Bello y los sectores cercanos, además de Medellín y el resto del Valle de Aburrá. Si estás en otra zona, escríbenos y te decimos si podemos
-          llegar.
-        </p>
-      </section>
+      <MapSection />
 
       <CtaBand />
     </>
