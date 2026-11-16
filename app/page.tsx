@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { Check, Plus } from "@/components/Icons";
-import { BeforeAfter } from "@/components/BeforeAfter";
 import { CtaBand } from "@/components/CtaBand";
+import { AntesDespuesSection } from "@/components/AntesDespuesSection";
 import { MapSection } from "@/components/MapSection";
 import { QuickQuote } from "@/components/QuickQuote";
 import { Bubbles } from "@/components/Bubbles";
 import { RisingBubbles } from "@/components/RisingBubbles";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { Testimonios } from "@/components/Testimonios";
-import { antesDespues, bannerImage, faqs, galeriaMuebles, promises, services, testimonios } from "@/lib/site";
+import { bannerImage, faqs, galeriaMuebles, promises, services, testimonios } from "@/lib/site";
 
 const categorias = [
   { icon: "oficinas", label: "Oficinas", href: "/servicios/limpieza-de-oficinas-medellin" },
@@ -227,17 +227,7 @@ export default function Home() {
       </section>
 
       {/* Antes y después (solo si hay fotos en lib/site.ts) */}
-      {antesDespues.length > 0 && (
-        <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <h2 className="font-display text-4xl leading-[1.1] text-navy md:text-5xl">Antes y después</h2>
-          <p className="mt-4 text-lg text-slate">Desliza la barra para ver la diferencia.</p>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            {antesDespues.map((a) => (
-              <BeforeAfter key={a.titulo} {...a} />
-            ))}
-          </div>
-        </section>
-      )}
+      <AntesDespuesSection />
 
       {/* Por qué */}
       <section className="bg-mist">

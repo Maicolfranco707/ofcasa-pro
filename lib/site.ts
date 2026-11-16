@@ -264,13 +264,19 @@ export const faqs = [
 ];
 
 /*
- * ANTES Y DESPUÉS
- * Para mostrar la sección, guarda las fotos en public/img/ y agrégalas aquí.
- * Ejemplo:
- * { titulo: "Cocina de oficina", antes: "/img/cocina-antes.jpg", despues: "/img/cocina-despues.jpg" },
- * Si la lista está vacía, la sección no aparece en la página.
+ * ANTES Y DESPUÉS (solo fotos reales de trabajos de Ofcasa Pro)
+ * Guarda las fotos en public/img/ y agrégalas aquí.
+ * - Una sola imagen que ya trae el antes y el después juntos:
+ *   { titulo: "Lavado de colchón", imagen: "/img/archivo.jpg" }
+ * - Dos fotos tomadas desde el mismo ángulo (sale un comparador deslizable):
+ *   { titulo: "Cocina de oficina", antes: "/img/antes.jpg", despues: "/img/despues.jpg" }
+ * Si la lista está vacía, la sección no aparece.
  */
-export const antesDespues: { titulo: string; antes: string; despues: string }[] = [];
+export type AntesDespues = { titulo: string; imagen?: string; antes?: string; despues?: string };
+
+export const antesDespues: AntesDespues[] = [
+  { titulo: "Lavado de colchón", imagen: "/img/antes-despues-colchon.jpg" },
+];
 
 /*
  * TESTIMONIOS

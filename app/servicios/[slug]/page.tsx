@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { RisingBubbles } from "@/components/RisingBubbles";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TikTokVideos } from "@/components/TikTokVideos";
+import { AntesDespuesSection } from "@/components/AntesDespuesSection";
 import { faqs, galeriaMuebles, serviceBySlug, services, site, waLink } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -140,6 +141,7 @@ export default async function ServicioPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
+      {s.id === "hogar" && <AntesDespuesSection tone="white" />}
       {s.id === "hogar" && <TikTokVideos />}
 
       {/* Detalle */}
